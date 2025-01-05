@@ -48,7 +48,7 @@ review_input = st.text_area(
 if st.button("Analyze Sentiment"):
     if review_input.strip() == "":
         st.warning("Please enter a review to analyze.")
-    elif len(review_input.split()) <= 40:
+    elif len(review_input.split()) <= 5:
         st.warning("Your review must be longer than 40 words. Please elaborate and try again.")
     else:
         # Preprocess the input
